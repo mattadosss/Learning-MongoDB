@@ -1,0 +1,9 @@
+use mflix;
+
+db.movies.countDocuments({cast: 'Leonardo DiCaprio'});
+db.movies.find({"cast" : 'Leonardo DiCaprio' },{"genres":1, "_id":0})
+db.movies.find({"cast" : 'Leonardo DiCaprio' },{"title":1, "year":1, "_id":0})
+db.movies.countDocuments({"directors" : 'Leonardo DiCaprio'});
+db.movies.find({"cast": 'Leonardo DiCaprio', "directors": "Martin Scorsese", "genres": "Drama", "genres": "Crime"},
+{"title":1, "year":1, "_id":0, "genres":1})
+db.movies.find({"directors": "Martin Scorsese"});
